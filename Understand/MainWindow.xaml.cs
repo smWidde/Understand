@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,16 @@ namespace Understand
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string path = @"C:\Users";
         public MainWindow()
         {
             InitializeComponent();
+            string[] normies = new string[Directory.GetDirectories(path).Length];
+            for(int i=0; i<normies.Length; i++)
+            {
+                normies[i] = Directory.GetDirectories(path)[i].Split('\\')[2];
+            }
+            Users.ItemsSource = normies;
         }
     }
 }

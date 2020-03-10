@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        <ComboBox></ComboBox>
+        <ComboBox Text="--Users--" FontSize="20" Name="Users" Canvas.Left="52" Canvas.Top="77" Height="40" Width="350"></ComboBox>
     </Canvas>
 </Window>
